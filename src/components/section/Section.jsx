@@ -23,7 +23,9 @@ export default function Section() {
                         <div className="welcome">Welcome to my Portfolio</div>
                         <h1>Hi! I'm Habiba <span id='jop' ref={jop}></span><span className='type'></span></h1>
                         <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Hi ! I am Habiba Front-end developer with a love for crafting exceptional user interfaces and
+creating memorable digital experiences. My journey in web development has equipped me with the skills to
+bring ideas to life through clean and efficient code.
                         </p>
                     </div>
                     <div className="image col-sm-12 col-lg-5">

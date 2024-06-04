@@ -3,7 +3,7 @@
     color: white;
     background-color: black;
     padding: var(--padding);
-    background-image: url(./../../imgs/color-sharp2.png);
+    background-image: url(./../../imgs/banner-bg.png);
     background-size: cover;
 }
 .projects .project .card {

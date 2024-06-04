@@ -10,6 +10,7 @@
     width: fit-content;
     box-shadow: 1px 1px 34px 1px #98de98;
     transition: .4s;
+    z-index: 100;
 }
 .contact div[role='alert'] img {
     width: 17px;

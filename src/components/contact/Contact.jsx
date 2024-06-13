@@ -7,7 +7,9 @@ import smile_img from './../../imgs/smile.png'
 import heart_img from './../../imgs/heart.png'
 export default function Contact() {
     let [err , setErr] = useState(false) ; 
-    let [alert , setAlert] = useState({top : "-90px"}) ; 
+    let [alertStyle , setAlertStyle] = useState({top : "-110px"}) ; 
+    let [checkFields , setCheckFields] = useState(false) ; 
+    let [submitted , setSubmitted] = useState(false) ; 
     let form = useRef() ; 
     function submit(e) {
         e.preventDefault() ; 
@@ -17,24 +19,38 @@ export default function Contact() {
             form.current , 
             'sD742EjGcoDRBjSnU'
         ) .then(() => {
-            setAlert({top : "0"})
+            setAlertStyle({top : "0"})
         }) .catch(err => {
-            setAlert({top : "0"})
+            setAlertStyle({top : "0"})
             setErr(true)
             console.log("something is wrong")
         })
+        setSubmitted(true) ; 
+        if(form.current.querySelectorAll("div")[0].querySelector("input").value.length === 0 ||
+        form.current.querySelectorAll("div")[1].querySelector("input").value.length === 0 || 
+        form.current.querySelectorAll("div")[2].querySelector("textarea").value.length === 0) setCheckFields(false) ;
+        else setCheckFields(true) ; 
+
+        console.log("check fields : " , checkFields)
     }
     function remove() {
-        setAlert({top : "-90px"})
+        setAlertStyle({top : "-110px"})
     }
     return(
         <div className="contact">
-            {err ? <Alert onClick={remove} style={alert} key= "danger" variant="danger">
-            check connection
+            {
+            !checkFields && submitted ? 
+            <Alert onClick={remove} style={alertStyle} key= "danger" variant="danger">
+                first name , email and message are required !
             </Alert> : 
-            <Alert onClick={remove} style={alert} key= "success" variant="success">
-            Thank you ! the message submitted <img src={smile_img} alt="smile" /> <img src={heart_img} alt="heart" />
-            </Alert>}
+            checkFields && err ? 
+            <Alert onClick={remove} style={alertStyle} key= "danger" variant="danger">
+                check connection
+            </Alert> :
+            checkFields && <Alert onClick={remove} style={alertStyle} key= "success" variant="success">
+                Thank you ! the message submitted <img src={smile_img} alt="smile" /> <img src={heart_img} alt="heart" />
+            </Alert> 
+            }
             <Container>
                 <div className="image">
                     <img src={contact_img} alt="contact image" />

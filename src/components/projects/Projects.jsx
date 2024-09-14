@@ -1,10 +1,12 @@
 import { Tab, Tabs } from 'react-bootstrap';
-import e_commerce_img from './../../imgs/e-commerce-image.png' ; 
+import e_commerce3_img from './../../imgs/e-commerce-imageThree.png' ; 
 import foodera_img from './../../imgs/foodera-image.png' ; 
 import project1_img from './../../imgs/project1-1-img.png' ; 
 import restaurant_img from './../../imgs/restaurant-image.png' ; 
 import register_img from './../../imgs/register-image.png' ; 
 import new_product_img from './../../imgs/new-product-image.png' ; 
+import toDoListImg from './../../imgs/to-do-list4.png'
+import calculatorImg from './../../imgs/calculator.png'
 import './projects.css'
 export default function Projects() {
     return (
@@ -26,20 +28,58 @@ export default function Projects() {
                     
                             <div className="project col-sm-12 col-md-6 col-lg-4 col-xl-3">
                                 <div className="card">
-                                <div className="image">
-                                    <img src={e_commerce_img} alt="e-commerce"/>
-                                </div>
-                                <div className="project-content">
-                                    <h2>E-commerce</h2>
-                                    <div className="links">
-                                    <button className="btn btn-dark">
-                                        <a href="https://habibaeid2.github.io/E-commerce"  className="demo">Demo</a>
-                                    </button>
-                                    <button className="btn btn-dark">
-                                        <a href="https://github.com/HabibaEid2/E-commerce" target = "_blank" className="gitHub">gitHub</a>
-                                    </button>
+                                    <div className="image">
+                                        <img src={e_commerce3_img} alt="e-commerce"/>
+                                    </div>
+                                    <div className="project-content">
+                                        <h2>E-commerce</h2>
+                                        <div className="links">
+                                        <button className="btn btn-dark">
+                                            <a href="https://habibaeid2.github.io/E-commerce"  className="demo">Demo</a>
+                                        </button>
+                                        <button className="btn btn-dark">
+                                            <a href="https://github.com/HabibaEid2/E-commerce" target = "_blank" className="gitHub">gitHub</a>
+                                        </button>
+                                        </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className="project col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                <div className="card">
+                                    <div className="image">
+                                        <img src={toDoListImg} alt=""/>
+                                    </div>
+                                    <div className="project-content">
+                                        <h2>To do list</h2>
+                                        <div className="links">
+                                        <button className="btn btn-dark">
+                                            <a href="https://habibaeid2.github.io/to-do-list" className="demo">Demo</a>
+                                        </button>
+                                        <button className="btn btn-dark">
+                                            <a href="https://github.com/HabibaEid2/to-do-list"  className="gitHub">gitHub</a>
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="project col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                                <div className="card">
+                                    <div className="image">
+                                        <img src={calculatorImg} alt=""/>
+                                    </div>
+                                    <div className="project-content">
+                                        <h2>Complex Calculator</h2>
+                                        <div className="links">
+                                        <button className="btn btn-dark">
+                                            <a href="https://habibaeid2.github.io/calculator" className="demo">Demo</a>
+                                        </button>
+                                        <button className="btn btn-dark">
+                                            <a href="https://github.com/HabibaEid2/calculator"  className="gitHub">gitHub</a>
+                                        </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -102,21 +142,21 @@ export default function Projects() {
 
                             <div className="project col-sm-12 col-md-6 col-lg-4 col-xl-3">
                                 <div className="card">
-                                <div className="image">
-                                    <img src={register_img} alt=""/>
-                                </div>
-                                <div className="project-content">
-                                    <h2>Register</h2>
-                                    <div className="links">
-                                    <button className="btn btn-dark">
-                                        <a href="https://habibaeid2.github.io/Register-page" className="demo">Demo</a>
-                                    </button>
-                                    <button className="btn btn-dark">
-                                        <a href="https://github.com/HabibaEid2/Register-page"  className="gitHub">gitHub</a>
-                                    </button>
+                                    <div className="image">
+                                        <img src={register_img} alt=""/>
+                                    </div>
+                                    <div className="project-content">
+                                        <h2>Register</h2>
+                                        <div className="links">
+                                        <button className="btn btn-dark">
+                                            <a href="https://habibaeid2.github.io/Register-page" className="demo">Demo</a>
+                                        </button>
+                                        <button className="btn btn-dark">
+                                            <a href="https://github.com/HabibaEid2/Register-page"  className="gitHub">gitHub</a>
+                                        </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
 
                             <div className="project col-sm-12 col-md-6 col-lg-4 col-xl-3">
@@ -137,6 +177,7 @@ export default function Projects() {
                                 </div>
                             </div>
                             </div>
+
                         </div>
                     </Tab>
                     <Tab eventKey="two" title="Tab 2" >
